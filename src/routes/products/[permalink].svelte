@@ -17,32 +17,31 @@
 </script>
 
 <script>
-	import Navbar from '$lib/components/Navbar.svelte';
-
 	export let product;
-	console.log(product);
 </script>
 
-<Navbar />
-<div class="container py-4">
-	<div class="row">
-		<div class="col-md">
-			<div class="row justify-content-center">
-				<div class="col-sm p-0 text-center">
-					<img src={product.media.source} alt="" />
-				</div>
-				<div class="col-sm">
-					<h1>{product.name}</h1>
-					<p>{product.price.formatted_with_symbol}</p>
-				</div>
-			</div>
+<a href="/" class="text-xl px-6 my-4">Back Home</a>
+
+<div class="container mx-auto py-4">
+	<div class="flex">
+		<div class="flex-col p-8">
+			<img src={product.media.source} alt="" />
+		</div>
+		<div class="flex-col p-8">
+			<h1 class="text-3xl mb-4">{product.name}</h1>
+			<p class="font-bold">{product.price.formatted_with_symbol}</p>
 		</div>
 	</div>
 </div>
 
 <style>
 	img {
-		height: 50%;
+		height: 20rem;
 		width: auto;
+		object-fit: fill;
+	}
+	a:hover {
+		color: rebeccapurple;
+		text-decoration: underline;
 	}
 </style>

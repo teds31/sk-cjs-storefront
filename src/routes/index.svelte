@@ -15,19 +15,14 @@
 </script>
 
 <script>
-	import '../app.css';
-	import Navbar from '$lib/components/Navbar.svelte';
-
 	export let categories;
 	export let products;
 </script>
 
-<Navbar />
-
 <div class="container">
-	<div class="row">
-		<div class="col-md px-4">
-			<h3>Categories</h3>
+	<div class="flex space-x-24 justify-center">
+		<div class="flex-col my-4">
+			<h3 class="text-2xl mb-4 border-b">Categories</h3>
 			<ul class="list-unstyled">
 				{#each categories as category}
 					<li class="py-1">
@@ -36,8 +31,8 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="col-md px-4">
-			<h3>Products</h3>
+		<div class="flex-col my-4">
+			<h3 class="text-2xl mb-4 border-b">Products</h3>
 			<ul class="list-unstyled">
 				{#each products as product}
 					<li class="py-1">
@@ -50,7 +45,8 @@
 </div>
 
 <style>
-	h3 {
-		border-bottom: 1px solid rebeccapurple;
+	a:hover {
+		color: rebeccapurple;
+		text-decoration: underline;
 	}
 </style>

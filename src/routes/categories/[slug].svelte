@@ -20,23 +20,30 @@
 </script>
 
 <script>
-	import Navbar from '$lib/components/Navbar.svelte';
-
 	export let category;
 	export let products;
 </script>
 
-<Navbar />
-<div class="container">
-	<div class="row">
-		<h1>{category.name}</h1>
+<a href="/" class="text-xl px-6 py-4">Back Home</a>
+<div class="container mx-auto my-4">
+	<div class="flex">
+		<div class="flex-col">
+			<h1 class="text-3xl border-b mb-4">{category.name}</h1>
 
-		<ul class="list-unstyled">
-			{#each products as product}
-				<li class="py-1">
-					<a rel="prefetch" href="/products/{product.permalink}">{product.name}</a>
-				</li>
-			{/each}
-		</ul>
+			<ul class="">
+				{#each products as product}
+					<li class="py-1">
+						<a rel="prefetch" href="/products/{product.permalink}">{product.name}</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</div>
 </div>
+
+<style>
+	a:hover {
+		color: rebeccapurple;
+		text-decoration: underline;
+	}
+</style>
