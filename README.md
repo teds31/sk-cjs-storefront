@@ -1,3 +1,9 @@
+# SvelteKit plus CommerceJS Demo Storefront
+
+Demo Link here: https://sk-cjs-storefront.vercel.app/
+
+*Note: Deploying on Vercel is problem free versus Netlify as of 08/11/21
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
